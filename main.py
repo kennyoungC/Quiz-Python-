@@ -1,9 +1,9 @@
-from quiz import question_bank
+from quiz import all_questions
 
 
 def starting_message():
-    print('Welcome to who wants to be a millionaire 🥁🥁🥁 ')
-    print('There are three segments, you can choose from; \n science - geeks \n politics - book worms \n geography - explorers')
+    print('Welcome to who wants to be a millionaire by kenneth 🥁🥁🥁 ')
+    print('There are three(3) segments, you can choose from; \n science - geeks \n politics - book worms \n geography - explorers')
     print('There are 10 questions and you have two attempts, if you get the answer wrong twice, the game ends')
     print('Good luck 🏋🏻‍♂️🏋🏻‍♂️')
 
@@ -11,13 +11,12 @@ def starting_message():
 starting_message()
 
 
-choice = input("Enter segment: politics,geography or science, pick one; ")
-# money_won = 500
+choice = input("Enter segment: politics, geography or science, pick one; ")
 
 
 def get_questions_science():
     if choice == 'science':
-        question_soups = question_bank['science']
+        question_soups = all_questions['science']
         money_won = 500
         for key in question_soups:
             quest = question_soups[key]['question']
@@ -33,7 +32,7 @@ def get_questions_science():
                     break
                 else:
                     attempt = attempt - 1
-                    # money_won = money_won - 100
+                    
                     print(
                         f"you have {attempt} attempt ,,  ")
                     if attempt == 0:
@@ -46,7 +45,7 @@ def get_questions_science():
 
 def get_questions_politics():
     if choice == 'politics':
-        question_soup = question_bank['politics']
+        question_soup = all_questions['politics']
         money_won = 500
         for keys in question_soup:
             quests = question_soup[keys]['question']
@@ -75,7 +74,7 @@ def get_questions_politics():
 def get_questions_geog():
     # choice = input("Enter segment: politics or science, pick one; ")
     if choice == 'geography':
-        question_soupy = question_bank['geography']
+        question_soupy = all_questions['geography']
         money_won = 500
         for keys in question_soupy:
             quests = question_soupy[keys]['question']

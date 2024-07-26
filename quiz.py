@@ -1,4 +1,4 @@
-question_bank = {
+all_questions = {
     'science': {
         '1': {
             'question': 'In what tabular display are the chemical elements typically displayed?',
